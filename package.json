@@ -1,0 +1,22 @@
+{
+  "name": "@tuansdf/fico",
+  "version": "1.0.0",
+  "description": "A CLI to compress files in your project using Gzip",
+  "module": "index.js",
+  "type": "module",
+  "bin": {
+    "fico": "index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gzip",
+    "compress"
+  ],
+  "author": "Nguyen Anh Tuan",
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^5.0.2"
+  }
+}
