@@ -1,5 +1,5 @@
 {
-  "name": "@tuansdf/fico",
+  "name": "fico-cli",
   "version": "1.0.0",
   "description": "A CLI to compress files in your project using Gzip",
   "module": "index.js",
