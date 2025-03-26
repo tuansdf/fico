@@ -12,16 +12,17 @@ const HELP =
 const args = arg(
   {
     "--override": Boolean,
+    "--verbose": Boolean,
     "--ext": [String],
     "--input": String,
     "-i": "--input",
     "-e": "--ext",
   },
-  { permissive: true },
+  { permissive: true }
 );
 if (!args["--ext"]?.length) {
   console.error(
-    "Please provide a list of extensions that should be compressed.",
+    "Please provide a list of extensions that should be compressed."
   );
   console.info(HELP);
   process.exit(1);
@@ -42,7 +43,9 @@ const compressFile = async (filePath) => {
     .pipe(gzip)
     .pipe(destination)
     .on("finish", () => {
-      console.log(`File ${filePath} compressed successfully!`);
+      if (args["--verbose"]) {
+        console.info(`File ${filePath} compressed successfully!`);
+      }
     });
 };
 
